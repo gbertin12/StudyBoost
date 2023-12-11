@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129864515571",
+    "project_id": "studycalendar-f950e",
+    "storage_bucket": "studycalendar-f950e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129864515571:android:437c9fc52379b300729c86",
+        "android_client_info": {
+          "package_name": "com.example.studyboost"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8H3Y-zlvc6H5ssMBgZj0FLAmoLgE2a70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
