@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:studyboost/firebase_options.dart';
-import 'package:table_calendar/table_calendar.dart';
+import 'package:studyboost/app/widgets/globalWidgets/bottomBarNavigation.dart';
 
 Future<void> main() async {
 	WidgetsFlutterBinding.ensureInitialized();
@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 	return MaterialApp(
-	  title: 'Flutter Demo',
-	  theme: ThemeData(
-		colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-		useMaterial3: true,
-	  ),
-	  home: const MyHomePage(title: 'Flutter Demo Home Page'),
+	    title: 'Flutter Demo',
+	    theme: ThemeData(
+		    colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+		    useMaterial3: true,
+	    ),
+	    home: const MyHomePage(title: 'Calendar'),
 	);
-  }
+    }
 }
 
 class MyHomePage extends StatefulWidget {
@@ -33,38 +33,19 @@ class MyHomePage extends StatefulWidget {
 	final String title;
 
 	@override
-	 State<MyHomePage> createState() => _MyHomePageState();
+	State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
-			appBar: AppBar(title: Text(widget.title)),
-			body: Content(),
+			appBar: AppBar(
+                title: Text(widget.title),
+                automaticallyImplyLeading: false,
+            ),
+			body: Text("Hello World"),
+            bottomNavigationBar: CustomBottomNavigationBar(currentIndex: 0,),
 		);
-  }
-
-	Widget Content() {
-		return Column(
-		children: [
-			Container(
-				child: TableCalendar(
-					headerStyle: const HeaderStyle(
-						titleCentered: true,
-						formatButtonVisible: false,
-						leftChevronIcon: Icon(Icons.chevron_left),
-						rightChevronIcon: Icon(Icons.chevron_right),
-					),
-					calendarStyle: const CalendarStyle(
-						weekendTextStyle: TextStyle(color: Colors.red),
-					),
-					firstDay: DateTime.utc(2010, 10, 16),
-					lastDay: DateTime.utc(2030, 3, 14),
-					focusedDay: DateTime.now(),
-				),
-			)
-		]
-		);
-	}
+    }	
 }
