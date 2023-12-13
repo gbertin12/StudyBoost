@@ -1,13 +1,13 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:studyboost/firebase_options.dart';
-import 'package:studyboost/app/widgets/globalWidgets/bottomBarNavigation.dart';
 
-Future<void> main() async {
-	WidgetsFlutterBinding.ensureInitialized();
-	await Firebase.initializeApp(
-		options: DefaultFirebaseOptions.currentPlatform
-	);
+import 'package:studyboost/app/widgets/globalWidgets/bottomBarNavigation.dart';
+import 'package:studyboost/domain/gateway/databaseGateway.dart';
+
+import 'dart:async';
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
+void main() async {
+    createDatabase();
 	runApp(const MyApp());
 }
 

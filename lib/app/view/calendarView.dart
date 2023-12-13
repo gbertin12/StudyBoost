@@ -94,7 +94,6 @@ class _CalendarViewState extends State<CalendarView> {
 	Widget Calendar() {
 		return Column(
 			children: [
-				Text("Selected day: " + today.toString().split(" ")[0]),
 				Container(
 					child: TableCalendar(
 						headerStyle: const HeaderStyle(
