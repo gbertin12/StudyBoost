@@ -8,6 +8,12 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 void main() async {
     createDatabase();
+    // String path = join(await getDatabasesPath(), 'studyboost_database.db');
+
+    // bool databaseExists = await databaseFactory.databaseExists(path);
+    // if (!databaseExists) {
+    //     createDatabase();
+    // }
 	runApp(const MyApp());
 }
 
